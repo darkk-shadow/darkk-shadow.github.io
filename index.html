@@ -4,42 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chithukati Balaji — Java Full Stack Developer</title>
+    <title>Chithukati Balaji | Java Full Stack Developer</title>
+    <meta name="description" content="Chithukati Balaji is a Java Full Stack Developer focused on Java, Spring Boot, REST APIs, microservices, React, and database-driven applications." />
+    <meta property="og:title" content="Chithukati Balaji | Java Full Stack Developer" />
+    <meta property="og:description" content="Portfolio of Chithukati Balaji, a Java Full Stack Developer building backend systems and full-stack applications." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://darkk-shadow.github.io/" />
+    <meta property="og:image" content="https://darkk-shadow.github.io/assets/Coding-bro.png" />
+    <link rel="canonical" href="https://darkk-shadow.github.io/" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text y='.9em' font-size='65' font-family='Poppins,sans-serif' font-weight='700' fill='white' x='50%' text-anchor='middle' dominant-baseline='hanging' dy='10'>B</text></svg>" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- DESKTOP NAV -->
     <nav id="desktop-nav">
-      <div class="logo" onclick="location.href='#profile'">Chithukati Balaji</div>
+      <a class="logo" href="#profile">Chithukati Balaji</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Skills</a></li>
         <li><a href="#internship">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
     <!-- MOBILE NAV -->
     <nav id="hamburger-nav">
-      <div class="logo">Chithukati Balaji</div>
+      <a class="logo" href="#profile">Chithukati Balaji</a>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+        <button class="hamburger-icon" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
-        </div>
-        <ul class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#internship" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </button>
+        <ul class="menu-links" id="mobile-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#internship">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
 
+    <main id="main-content">
     <!-- HERO / PROFILE -->
     <section id="profile" class="hidden">
       <div class="section__pic-container">
@@ -49,33 +60,22 @@
         <div class="open-to-work">Open to Work · Chennai</div>
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Chithukati Balaji</h1>
-        <p class="section__text__p2">
-          <span class="typewriter" id="typewriter"></span>
-        </p>
+        <p class="section__text__p2">Java Full Stack Developer</p>
+        <p class="hero-summary">Computer Science graduate focused on building scalable backend systems and full-stack applications using Java, Spring Boot, and React.</p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./assets/Balaji_Resumee.pdf')">
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+          <a class="btn btn-color-1" href="#projects">View Projects</a>
+          <a class="btn btn-color-2" href="./assets/Balaji_Resumee.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png" alt="LinkedIn" class="icon social-icon"
-            onclick="location.href='https://www.linkedin.com/in/chithukati-balaji-48aa7a282'"
-          />
-          <img
-            src="./assets/github.png" alt="GitHub" class="icon social-icon"
-            onclick="location.href='https://github.com/darkk-shadow'"
-          />
+          <a href="https://www.linkedin.com/in/chithukati-balaji-48aa7a282" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><img src="./assets/linkedin.png" alt="" class="icon social-icon" /></a>
+          <a href="https://github.com/darkk-shadow" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><img src="./assets/github.png" alt="" class="icon social-icon" /></a>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="hidden">
-      <p class="section__text__p1">Get To Know More</p>
+       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
@@ -96,17 +96,16 @@
           </div>
           <div class="text-container">
             <p>
-              Computer Science and Engineering graduate with hands-on experience
-              in Java, Full Stack Web Development, and REST API integration.
-              Skilled in Core Java, SQL, OOP, Data Structures, and MySQL with
-              internship experience in developing scalable web applications.
-              Passionate about problem-solving, backend development, and
-              continuous learning.
+              Computer Science and Engineering graduate with hands-on experience in
+              Java development, Spring Boot, REST APIs, microservices, React, and
+              database-driven applications. I focus on building reliable backend
+              services and practical full-stack products with clean architecture,
+              secure APIs, and thoughtful user experiences.
             </p>
           </div>
         </div>
       </div>
-      <img src="./assets/arrow.png" alt="Next" class="icon arrow" onclick="location.href='./#experience'" />
+      <a href="#experience" class="arrow-link" aria-label="Go to skills"><img src="./assets/arrow.png" alt="" class="icon arrow" /></a>
     </section>
 
     <!-- SKILLS -->
@@ -117,67 +116,67 @@
         <div class="about-containers">
 
           <div class="details-container">
-            <h2 class="experience-sub-title">Languages</h2>
+            <h2 class="experience-sub-title">Programming</h2>
             <div class="article-container">
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Java</h3><p>Intermediate</p></div>
+                <div><h3>Java</h3><p>Core Java · OOP</p></div>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>JavaScript</h3><p>Experienced</p></div>
+                <div><h3>SQL</h3><p>MySQL · PostgreSQL</p></div>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>SQL</h3><p>Intermediate</p></div>
+                <div><h3>JavaScript</h3><p>ES6+ · DOM</p></div>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>HTML / CSS</h3><p>Experienced</p></div>
+                <div><h3>Data Structures</h3><p>Problem solving</p></div>
               </article>
             </div>
           </div>
 
           <div class="details-container">
-            <h2 class="experience-sub-title">Technologies</h2>
+            <h2 class="experience-sub-title">Backend</h2>
             <div class="article-container">
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>REST APIs</h3><p>Intermediate</p></div>
+                <div><h3>Spring Boot</h3><p>Spring Data JPA · Hibernate</p></div>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>MySQL</h3><p>Intermediate</p></div>
+                <div><h3>REST APIs</h3><p>JDBC · Servlets · JSP</p></div>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Git / GitHub</h3><p>Intermediate</p></div>
+                <div><h3>Microservices</h3><p>Eureka · Feign Client</p></div>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Spring Boot</h3><p>Intermediate</p></div>
+                <div><h3>Security</h3><p>JWT Authentication</p></div>
               </article>
             </div>
           </div>
 
           <div class="details-container">
-            <h2 class="experience-sub-title">DevOps</h2>
+            <h2 class="experience-sub-title">Frontend & Tools</h2>
             <div class="article-container">
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Jenkins</h3><p>Basics</p></div>
+                <div><h3>React.js</h3><p>Redux · Material-UI</p></div>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Docker</h3><p>Basics</p></div>
+                <div><h3>HTML5 / CSS3</h3><p>Responsive UI</p></div>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>AWS</h3><p>Basics</p></div>
+                <div><h3>Git / GitHub</h3><p>Version control</p></div>
               </article>
               <article>
                 <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Linux</h3><p>Intermediate</p></div>
+                <div><h3>Postman</h3><p>API testing</p></div>
               </article>
             </div>
           </div>
@@ -185,36 +184,7 @@
         </div>
       </div>
 
-      <!-- SKILL PROGRESS BARS -->
-      <div class="skill-bars-container hidden" id="skill-bars">
-        <h2 class="experience-sub-title" style="text-align:center; margin-bottom: 1.5rem;">Proficiency</h2>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>Java</span><span>70%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>JavaScript</span><span>80%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>HTML / CSS</span><span>85%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>SQL / MySQL</span><span>70%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>REST APIs</span><span>75%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>Git / GitHub</span><span>75%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
-        </div>
-      </div>
-
-      <img src="./assets/arrow.png" alt="Next" class="icon arrow" onclick="location.href='./#internship'" />
+      <a href="#internship" class="arrow-link" aria-label="Go to experience"><img src="./assets/arrow.png" alt="" class="icon arrow" /></a>
     </section>
 
     <!-- INTERNSHIP / EXPERIENCE TIMELINE -->
@@ -278,7 +248,7 @@
         </div>
 
       </div>
-      <img src="./assets/arrow.png" alt="Next" class="icon arrow internship-arrow" onclick="location.href='./#projects'" />
+      <a href="#projects" class="arrow-link internship-arrow" aria-label="Go to projects"><img src="./assets/arrow.png" alt="" class="icon arrow" /></a>
     </section>
 
     <!-- PROJECTS -->
@@ -298,16 +268,17 @@
             </div>
             <h2 class="experience-sub-title project-title">ELAMS</h2>
             <p class="project-tag">Spring Boot · React · MySQL · Material-UI</p>
+            <p class="project-description">Employee leave requests, attendance tracking, and multi-level approval workflows delivered through a microservices backend and React frontend.</p>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/darkk-shadow/elams-react'">Frontend</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/darkk-shadow/elams-microservices'">Backend</button>
+              <a class="btn btn-color-2 project-btn" href="https://github.com/darkk-shadow/elams-react" target="_blank" rel="noopener noreferrer">Frontend</a>
+              <a class="btn btn-color-2 project-btn" href="https://github.com/darkk-shadow/elams-microservices" target="_blank" rel="noopener noreferrer">Backend</a>
             </div>
           </div>
 
           <!-- Algorithm Visualizer -->
           <div class="details-container color-container project-card hidden">
             <div class="project-img-wrapper">
-              <img src="./assets/Coding-bro.png" alt="Algorithm Visualizer" class="project-img" />
+              <img src="./assets/algorithm-visualizer.jpg" alt="Algorithm Visualizer dashboard" class="project-img" />
               <div class="project-overlay">
                 <p>Interactive sorting visualizer for Bubble, Selection & Insertion Sort. GSAP animations + pseudocode highlighting.</p>
               </div>
@@ -315,13 +286,33 @@
             <h2 class="experience-sub-title project-title">Algorithm Visualizer</h2>
             <p class="project-tag">HTML · CSS · JavaScript · GSAP</p>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/darkk-shadow/algo-vis'">GitHub</button>
+              <a class="btn btn-color-2 project-btn" href="https://github.com/darkk-shadow/algo-vis" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
 
         </div>
       </div>
-      <img src="./assets/arrow.png" alt="Next" class="icon arrow" onclick="location.href='./#contact'" />
+      <a href="#contact" class="arrow-link" aria-label="Go to contact"><img src="./assets/arrow.png" alt="" class="icon arrow" /></a>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section id="education" class="hidden">
+      <p class="section__text__p1">My Background</p>
+      <h1 class="title">Education & Certifications</h1>
+      <div class="education-grid">
+        <div class="details-container education-card">
+          <h2 class="experience-sub-title">Education</h2>
+          <div class="education-item"><h3>B.E. Computer Science and Engineering</h3><p>Annamalai University · 2022 – 2025</p></div>
+          <div class="education-item"><h3>Diploma</h3><p>V Ramakrishna Polytechnic College · 84.5%</p></div>
+          <div class="education-item"><h3>SSLC</h3><p>ZPHS, Obulalayapalli · CGPA: 8.2</p></div>
+        </div>
+        <div class="details-container education-card">
+          <h2 class="experience-sub-title">Certifications</h2>
+          <div class="education-item"><h3>Java Full Stack Development</h3><p>QSpiders · In Progress</p></div>
+          <div class="education-item"><h3>Cloud Computing</h3><p>NPTEL</p></div>
+          <div class="education-item"><h3>Social Networks</h3><p>NPTEL</p></div>
+        </div>
+      </div>
     </section>
 
     <!-- CONTACT -->
@@ -334,19 +325,29 @@
           <p><a href="mailto:balaji.chithukati@gmail.com">balaji.chithukati@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
+          <span class="contact-text-icon" aria-hidden="true">☎</span>
+          <p><a href="tel:+919361515765">+91 9361515765</a></p>
+        </div>
+        <div class="contact-info-container">
           <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon" />
           <p>
-            <a href="https://www.linkedin.com/in/chithukati-balaji-48aa7a282" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/chithukati-balaji-48aa7a282" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </p>
+        </div>
+        <div class="contact-info-container">
+          <span class="contact-text-icon" aria-hidden="true">↗</span>
+          <p><a href="https://darkk-shadow.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a></p>
         </div>
         <div class="contact-info-container">
           <img src="./assets/github.png" alt="GitHub" class="icon contact-icon" />
           <p>
-            <a href="https://github.com/darkk-shadow" target="_blank">GitHub</a>
+            <a href="https://github.com/darkk-shadow" target="_blank" rel="noopener noreferrer">GitHub</a>
           </p>
         </div>
       </div>
     </section>
+
+    </main>
 
     <!-- FOOTER -->
     <footer class="hidden">
@@ -356,6 +357,7 @@
           <li><a href="#experience">Skills</a></li>
           <li><a href="#internship">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
