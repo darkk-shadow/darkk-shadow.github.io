@@ -4,16 +4,33 @@
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
+  const isOpen = !menu.classList.contains("open");
+  menu.classList.toggle("open", isOpen);
+  icon.classList.toggle("open", isOpen);
+  icon.setAttribute("aria-expanded", String(isOpen));
+}
+
+function closeMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.remove("open");
+  icon.classList.remove("open");
+  icon.setAttribute("aria-expanded", "false");
 }
 
 // Close menu when clicking outside
 document.addEventListener("click", function (e) {
   const nav = document.querySelector("#hamburger-nav");
   if (nav && !nav.contains(e.target)) {
-    document.querySelector(".menu-links").classList.remove("open");
-    document.querySelector(".hamburger-icon").classList.remove("open");
+    closeMenu();
+  }
+});
+
+document.addEventListener("keydown", function (e) {
+  const menu = document.querySelector(".menu-links");
+  if (e.key === "Escape" && menu.classList.contains("open")) {
+    closeMenu();
+    document.querySelector(".hamburger-icon").focus();
   }
 });
 
@@ -31,6 +48,7 @@ let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 const typeEl = document.getElementById("typewriter");
+document.getElementById("current-year").textContent = String(new Date().getFullYear());
 
 function type() {
   const current = roles[roleIndex];
@@ -56,33 +74,21 @@ function type() {
   setTimeout(type, delay);
 }
 
-type();
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  typeEl.textContent = roles[0];
+} else {
+  type();
+}
 
 // ===========================
-// SCROLL REVEAL + SKILL BARS
+// SCROLL REVEAL
 // ===========================
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-
-        // Animate skill bars when they come into view
-        if (entry.target.id === "skill-bars") {
-          entry.target.querySelectorAll(".skill-bar-fill").forEach((bar) => {
-            const targetWidth = bar.getAttribute("data-width");
-            setTimeout(() => {
-              bar.style.width = targetWidth + "%";
-            }, 200);
-          });
-        }
       } else {
-        // Re-animate on scroll back (except skill bars — reset them)
-        if (entry.target.id === "skill-bars") {
-          entry.target.querySelectorAll(".skill-bar-fill").forEach((bar) => {
-            bar.style.width = "0%";
-          });
-        }
         entry.target.classList.remove("show");
       }
     });

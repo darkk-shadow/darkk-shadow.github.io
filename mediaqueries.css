@@ -12,7 +12,7 @@
 
   #profile, .section-container { display: block; }
 
-  .arrow { display: none; }
+  .section-arrow { display: none; }
 
   section, .section-container { height: fit-content; }
 
@@ -26,8 +26,6 @@
 
   .about-containers { margin-top: 0; }
 
-  .skill-bars-container { margin: 2rem 0; }
-
   .timeline { padding-left: 1.5rem; }
 }
 
@@ -38,7 +36,6 @@
   .timeline-content h3 { font-size: 1rem; }
   .timeline-content h4 { font-size: 0.88rem; }
 
-  .project-img-wrapper { width: 14rem; height: 14rem; }
   .color-container { max-width: 100%; width: 100%; }
 }
 
@@ -67,8 +64,8 @@
   .nav-links { flex-direction: column; gap: 0.5rem; text-align: center; }
 
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: min(68vw, 260px);
+    height: min(68vw, 260px);
     justify-content: center;
   }
 
@@ -78,5 +75,4 @@
 
   .text-container { text-align: justify; }
 
-  .skill-bars-container { padding: 1rem; }
 }

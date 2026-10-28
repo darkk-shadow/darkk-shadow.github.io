@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chithukati Balaji — Java Full Stack Developer</title>
+    <meta name="description" content="Chithukati Balaji is a Java full-stack developer in Chennai, focused on Java, Spring Boot, React, REST APIs, and MySQL." />
+    <meta name="theme-color" content="#2563eb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Chithukati Balaji — Java Full Stack Developer" />
+    <meta property="og:description" content="Explore Chithukati Balaji's skills, experience, and full-stack development projects." />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text y='.9em' font-size='65' font-family='Poppins,sans-serif' font-weight='700' fill='white' x='50%' text-anchor='middle' dominant-baseline='hanging' dy='10'>B</text></svg>" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- DESKTOP NAV -->
-    <nav id="desktop-nav">
-      <div class="logo" onclick="location.href='#profile'">Chithukati Balaji</div>
+    <nav id="desktop-nav" aria-label="Primary navigation">
+      <a class="logo" href="#profile">Chithukati Balaji</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Skills</a></li>
@@ -24,13 +30,13 @@
     </nav>
 
     <!-- MOBILE NAV -->
-    <nav id="hamburger-nav">
-      <div class="logo">Chithukati Balaji</div>
+    <nav id="hamburger-nav" aria-label="Mobile navigation">
+      <a class="logo" href="#profile">Chithukati Balaji</a>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </div>
-        <ul class="menu-links">
+        <button class="hamburger-icon" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMenu()">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <ul class="menu-links" id="mobile-menu">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#internship" onclick="toggleMenu()">Experience</a></li>
@@ -41,45 +47,44 @@
     </nav>
 
     <!-- HERO / PROFILE -->
-    <section id="profile" class="hidden">
+    <main id="main-content">
+    <section id="profile" class="hidden" aria-labelledby="profile-title">
       <div class="section__pic-container">
-        <img src="./assets/Coding-bro.png" alt="Chithukati Balaji" />
+        <img src="./assets/Profile.jpg" alt="Chithukati Balaji" />
       </div>
       <div class="section__text">
         <div class="open-to-work">Open to Work · Chennai</div>
         <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Chithukati Balaji</h1>
+        <h1 class="title" id="profile-title">Chithukati Balaji</h1>
         <p class="section__text__p2">
           <span class="typewriter" id="typewriter"></span>
         </p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./assets/Balaji_Resumee.pdf')">
+          <a class="btn btn-color-2" href="./assets/Balaji_Resume.pdf" download>
             Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          </a>
+          <a class="btn btn-color-1" href="#contact">
             Contact Info
-          </button>
+          </a>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png" alt="LinkedIn" class="icon social-icon"
-            onclick="location.href='https://www.linkedin.com/in/chithukati-balaji-48aa7a282'"
-          />
-          <img
-            src="./assets/github.png" alt="GitHub" class="icon social-icon"
-            onclick="location.href='https://github.com/darkk-shadow'"
-          />
+          <a href="https://www.linkedin.com/in/chithukati-balaji-48aa7a282" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <img src="./assets/linkedin.png" alt="" class="icon social-icon" />
+          </a>
+          <a href="https://github.com/darkk-shadow" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <img src="./assets/github.png" alt="" class="icon social-icon" />
+          </a>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="hidden">
+    <section id="about" class="hidden" aria-labelledby="about-title">
       <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+      <h2 class="title" id="about-title">About Me</h2>
       <div class="section-container">
         <div class="section__pic-container">
-          <img src="./assets/Learning-bro.png" alt="About" class="about-pic" />
+          <img src="./assets/Learning-bro.png" alt="" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="about-containers">
@@ -96,143 +101,123 @@
           </div>
           <div class="text-container">
             <p>
-              Computer Science and Engineering graduate with hands-on experience
-              in Java, Full Stack Web Development, and REST API integration.
-              Skilled in Core Java, SQL, OOP, Data Structures, and MySQL with
-              internship experience in developing scalable web applications.
-              Passionate about problem-solving, backend development, and
-              continuous learning.
+              Computer Science graduate focused on Java full-stack development.
+              I build applications with Java, Spring Boot, React, and SQL, and
+              enjoy working across REST APIs, responsive interfaces, and
+              data-driven features. My projects include employee leave and
+              attendance management, patient management, and an algorithm
+              visualizer. I’m looking for an entry-level role where I can
+              contribute, learn from a strong engineering team, and grow as a
+              developer.
             </p>
           </div>
         </div>
       </div>
-      <img src="./assets/arrow.png" alt="Next" class="icon arrow" onclick="location.href='./#experience'" />
+      <a class="section-arrow" href="#experience" aria-label="Go to technical skills">
+        <img src="./assets/arrow.png" alt="" class="icon" />
+      </a>
     </section>
 
     <!-- SKILLS -->
-    <section id="experience" class="hidden">
+    <section id="experience" class="hidden" aria-labelledby="skills-title">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Technical Skills</h1>
+      <h2 class="title" id="skills-title">Technical Skills</h2>
       <div class="experience-details-container">
-        <div class="about-containers">
-
-          <div class="details-container">
-            <h2 class="experience-sub-title">Languages</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Java</h3><p>Intermediate</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>JavaScript</h3><p>Experienced</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>SQL</h3><p>Intermediate</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>HTML / CSS</h3><p>Experienced</p></div>
-              </article>
-            </div>
+        <div class="skill-grid">
+          <div class="details-container skill-card">
+            <h3 class="experience-sub-title">Languages</h3>
+            <ul class="skill-list" aria-label="Programming languages">
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+            </ul>
           </div>
 
-          <div class="details-container">
-            <h2 class="experience-sub-title">Technologies</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>REST APIs</h3><p>Intermediate</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>MySQL</h3><p>Intermediate</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Git / GitHub</h3><p>Intermediate</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Spring Boot</h3><p>Intermediate</p></div>
-              </article>
-            </div>
+          <div class="details-container skill-card">
+            <h3 class="experience-sub-title">Web &amp; UI</h3>
+            <ul class="skill-list" aria-label="Web technologies">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>React.js</li>
+            </ul>
           </div>
 
-          <div class="details-container">
-            <h2 class="experience-sub-title">DevOps</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Jenkins</h3><p>Basics</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Docker</h3><p>Basics</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>AWS</h3><p>Basics</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="✓" class="icon" />
-                <div><h3>Linux</h3><p>Intermediate</p></div>
-              </article>
-            </div>
+          <div class="details-container skill-card">
+            <h3 class="experience-sub-title">Java &amp; Backend</h3>
+            <ul class="skill-list" aria-label="Java and backend frameworks">
+              <li>Spring Boot</li>
+              <li>Spring Data JPA</li>
+              <li>Hibernate</li>
+              <li>WebClient</li>
+              <li>JDBC</li>
+              <li>Servlets</li>
+              <li>JSP</li>
+            </ul>
           </div>
 
+          <div class="details-container skill-card">
+            <h3 class="experience-sub-title">Microservices &amp; Security</h3>
+            <ul class="skill-list" aria-label="Microservices and security">
+              <li>Eureka Service Discovery</li>
+              <li>Spring Cloud Gateway</li>
+              <li>Config Server</li>
+              <li>Feign Clients</li>
+              <li>REST APIs</li>
+              <li>Spring Security</li>
+              <li>JWT Authentication</li>
+            </ul>
+          </div>
+
+          <div class="details-container skill-card">
+            <h3 class="experience-sub-title">Databases &amp; Tools</h3>
+            <ul class="skill-list" aria-label="Databases and development tools">
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Docker</li>
+              <li>Postman</li>
+              <li>Maven</li>
+              <li>IntelliJ IDEA</li>
+              <li>Eclipse</li>
+              <li>VS Code</li>
+            </ul>
+          </div>
+
+          <div class="details-container skill-card">
+            <h3 class="experience-sub-title">Core Concepts</h3>
+            <ul class="skill-list" aria-label="Core computer science concepts">
+              <li>OOP</li>
+              <li>Collections</li>
+              <li>Exception Handling</li>
+              <li>Multithreading</li>
+              <li>CRUD Operations</li>
+              <li>Dependency Injection</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <!-- SKILL PROGRESS BARS -->
-      <div class="skill-bars-container hidden" id="skill-bars">
-        <h2 class="experience-sub-title" style="text-align:center; margin-bottom: 1.5rem;">Proficiency</h2>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>Java</span><span>70%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>JavaScript</span><span>80%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>HTML / CSS</span><span>85%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>SQL / MySQL</span><span>70%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>REST APIs</span><span>75%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>Git / GitHub</span><span>75%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
-        </div>
-      </div>
-
-      <img src="./assets/arrow.png" alt="Next" class="icon arrow" onclick="location.href='./#internship'" />
+      <a class="section-arrow" href="#internship" aria-label="Go to experience">
+        <img src="./assets/arrow.png" alt="" class="icon" />
+      </a>
     </section>
 
     <!-- INTERNSHIP / EXPERIENCE TIMELINE -->
-    <section id="internship" class="hidden">
+    <section id="internship" class="hidden" aria-labelledby="experience-title">
       <p class="section__text__p1">My Work</p>
-      <h1 class="title">Experience</h1>
+      <h2 class="title" id="experience-title">Experience</h2>
       <div class="timeline">
 
         <div class="timeline-item hidden">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-date">Jun 2024 – Jul 2024</span>
-            <h3>Full Stack Web Development</h3>
-            <h4>8Queens Software Technologies Pvt Ltd</h4>
+            <span class="timeline-date">Nov 2025 – Sep 2026</span>
+            <h3>Java Full Stack Development Training</h3>
+            <h4>QSpiders, Chennai</h4>
             <ul>
-              <li>Designed and developed portfolio websites using React, enhancing UI responsiveness.</li>
-              <li>Optimized application performance, reducing page load time by 25%.</li>
-              <li>Practised real-time development and problem-solving scenarios.</li>
+              <li>Built skills in Java, Spring Boot, React, DevOps, Docker, Jenkins, and AWS.</li>
+              <li>Completed full-stack projects and interview preparation as part of the training.</li>
             </ul>
           </div>
         </div>
@@ -244,9 +229,22 @@
             <h3>Java Development Intern</h3>
             <h4>Besant Technologies Pvt Ltd</h4>
             <ul>
-              <li>Developed and optimized blog websites, improving load performance by 12%.</li>
-              <li>Reduced bugs by 30% through cross-browser testing and validation.</li>
-              <li>Completed real-world development tasks with modern tech stacks.</li>
+              <li>Developed and optimized blog websites.</li>
+              <li>Tested across browsers and validated changes to identify and resolve issues.</li>
+              <li>Completed practical development tasks using modern web technologies.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item hidden">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jun 2024 – Jul 2024</span>
+            <h3>Full Stack Web Development</h3>
+            <h4>8Queens Software Technologies Pvt Ltd</h4>
+            <ul>
+              <li>Designed and developed portfolio websites using React with a focus on responsive interfaces.</li>
+              <li>Worked on page-load performance and practiced real-time development and problem-solving.</li>
             </ul>
           </div>
         </div>
@@ -255,102 +253,105 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-date">Jun 2023 – Jul 2023</span>
-            <h3>AIML Intern</h3>
+            <h3>AI / ML Intern</h3>
             <h4>Annamalai Innovation and Incubation Research Foundation</h4>
             <ul>
-              <li>Gained hands-on experience in supervised and unsupervised learning techniques.</li>
-              <li>Worked with Python and Scikit-learn to train ML models for classification and prediction.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item hidden">
-          <div class="timeline-dot active-dot"></div>
-          <div class="timeline-content active-timeline">
-            <span class="timeline-date">Sep 2025 – Present</span>
-            <h3>Java Full Stack Development Training</h3>
-            <h4>QSpiders, Chennai</h4>
-            <ul>
-              <li>Deepening skills in Java, Spring Boot, React, DevOps, Docker, Jenkins, and AWS.</li>
-              <li>Working on real-world full stack projects and interview preparation.</li>
+              <li>Gained hands-on experience with supervised and unsupervised learning techniques.</li>
+              <li>Used Python and Scikit-learn to train models for classification and prediction.</li>
             </ul>
           </div>
         </div>
 
       </div>
-      <img src="./assets/arrow.png" alt="Next" class="icon arrow internship-arrow" onclick="location.href='./#projects'" />
+      <a class="section-arrow internship-arrow" href="#projects" aria-label="Go to projects">
+        <img src="./assets/arrow.png" alt="" class="icon" />
+      </a>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="hidden">
+    <section id="projects" class="hidden" aria-labelledby="projects-title">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <h2 class="title" id="projects-title">Projects</h2>
       <div class="experience-details-container">
         <div class="about-containers projects-grid">
 
           <!-- ELAMS -->
           <div class="details-container color-container project-card hidden">
             <div class="project-img-wrapper">
-              <img src="./assets/Visual data-pana.png" alt="ELAMS" class="project-img" />
-              <div class="project-overlay">
-                <p>Full-stack system for leave requests, approvals, and attendance tracking. REST APIs + MySQL + Material-UI.</p>
-              </div>
+              <img src="./assets/elams-clean-dashboard.svg" alt="Illustration of an employee dashboard for attendance, leave requests, approvals, and team calendar" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">ELAMS</h2>
+            <h3 class="experience-sub-title project-title">Employee Leave and Attendance Management System</h3>
             <p class="project-tag">Spring Boot · React · MySQL · Material-UI</p>
+            <p class="project-description">A Spring Boot, React, and MySQL employee leave and attendance system. The public preview is frontend-only and uses fictional sample data.</p>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/darkk-shadow/elams-react'">Frontend</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/darkk-shadow/elams-microservices'">Backend</button>
+              <a class="btn btn-color-1 project-btn" href="https://darkk-shadow.github.io/elams/demo" target="_blank" rel="noopener noreferrer">Sample demo</a>
+              <a class="btn btn-color-2 project-btn" href="https://github.com/darkk-shadow/elams" target="_blank" rel="noopener noreferrer">View source</a>
+            </div>
+          </div>
+
+          <!-- Patient Management System -->
+          <div class="details-container color-container project-card hidden">
+            <div class="project-img-wrapper pms-project-wrapper">
+              <img src="./assets/pms2-card.jpg" alt="Patient Management System logo with a healthcare shield" class="project-img pms-project-img" />
+            </div>
+            <h3 class="experience-sub-title project-title">Patient Management System</h3>
+            <p class="project-tag">NestJS · React · PostgreSQL · Redux Toolkit</p>
+            <p class="project-description">A full-stack patient management application for patient records, billing, and payments, built with NestJS, React, and PostgreSQL.</p>
+            <div class="btn-container">
+              <a class="btn btn-color-1 project-btn" href="https://pms-frontend-steel.vercel.app/login" target="_blank" rel="noopener noreferrer">Login preview</a>
+              <a class="btn btn-color-2 project-btn" href="https://github.com/darkk-shadow/pms" target="_blank" rel="noopener noreferrer">View source</a>
             </div>
           </div>
 
           <!-- Algorithm Visualizer -->
           <div class="details-container color-container project-card hidden">
             <div class="project-img-wrapper">
-              <img src="./assets/Coding-bro.png" alt="Algorithm Visualizer" class="project-img" />
-              <div class="project-overlay">
-                <p>Interactive sorting visualizer for Bubble, Selection & Insertion Sort. GSAP animations + pseudocode highlighting.</p>
-              </div>
+              <img src="./assets/Algo-vis-clean.jpg" alt="Sorting Algorithm Visualizer with glowing colored bars" class="project-img algorithm-project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">Algorithm Visualizer</h2>
+            <h3 class="experience-sub-title project-title">Algorithm Visualizer</h3>
             <p class="project-tag">HTML · CSS · JavaScript · GSAP</p>
+            <p class="project-description">Visualizes Bubble, Selection, and Insertion Sort with animated steps and synchronized pseudocode highlighting.</p>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/darkk-shadow/algo-vis'">GitHub</button>
+              <a class="btn btn-color-1 project-btn" href="https://darkk-shadow.github.io/algorithm-visualizer/" target="_blank" rel="noopener noreferrer">Live demo</a>
+              <a class="btn btn-color-2 project-btn" href="https://github.com/darkk-shadow/algorithm-visualizer" target="_blank" rel="noopener noreferrer">View source</a>
             </div>
           </div>
 
         </div>
       </div>
-      <img src="./assets/arrow.png" alt="Next" class="icon arrow" onclick="location.href='./#contact'" />
+      <a class="section-arrow" href="#contact" aria-label="Go to contact information">
+        <img src="./assets/arrow.png" alt="" class="icon" />
+      </a>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="hidden">
+    <section id="contact" class="hidden" aria-labelledby="contact-title">
       <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+      <h2 class="title" id="contact-title">Contact Me</h2>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
-          <img src="./assets/email.png" alt="Email" class="icon contact-icon email-icon" />
-          <p><a href="mailto:balaji.chithukati@gmail.com">balaji.chithukati@gmail.com</a></p>
+          <img src="./assets/email.png" alt="" class="icon contact-icon email-icon" />
+          <p><a href="mailto:balaji.chithukati@gmail.com">balaji.chithukati<wbr />@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
-          <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon" />
+          <img src="./assets/linkedin.png" alt="" class="icon contact-icon" />
           <p>
-            <a href="https://www.linkedin.com/in/chithukati-balaji-48aa7a282" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/chithukati-balaji-48aa7a282" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </p>
         </div>
         <div class="contact-info-container">
-          <img src="./assets/github.png" alt="GitHub" class="icon contact-icon" />
+          <img src="./assets/github.png" alt="" class="icon contact-icon" />
           <p>
-            <a href="https://github.com/darkk-shadow" target="_blank">GitHub</a>
+            <a href="https://github.com/darkk-shadow" target="_blank" rel="noopener noreferrer">GitHub</a>
           </p>
         </div>
       </div>
     </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="hidden">
-      <nav>
+      <nav aria-label="Footer navigation">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Skills</a></li>
@@ -359,7 +360,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <p>Copyright &#169; 2026 Chithukati Balaji. All Rights Reserved.</p>
+      <p>Copyright &#169; <span id="current-year"></span> Chithukati Balaji. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
